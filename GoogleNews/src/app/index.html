@@ -1,0 +1,27 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gnews</title>
+    <link rel="stylesheet" href="assets/app.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+
+<body>
+    <div ng-app="app">
+        <nav class="navbar navbar-inverse navbar-news">
+            <div class="pull-right ">
+                <a href="#/news" class="a-news">news</a>
+            </div>
+        </nav>
+        <ui-view></ui-view>
+        <div spinner></div>
+    </div>
+
+
+    <script src="assets/vendor.js"></script>
+    <script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+﻿@import "vars.scss";
+@import '../../bower_components/sass-bootstrap/lib/bootstrap';
+@import "../../components/gnews/features/article/article.style";
+@import "../../components/gnews/features/topics/topics.style";
+
+body {
+    .navbar-news {
+        background: $color-base !important;
+        border-color: $color-base !important;
+    }
+
+    .a-news {
+        color: $color-yellow-base !important;
+        font-family: $font-family-base;
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    .font-bold {
+        font-weight: bold;
+    }
+
+    .cursor-pointer {
+        cursor: pointer;
+    }
+
+    .display-inline {
+        display: inline-block;
+    }
+
+    .vertical-top {
+        vertical-align: top;
+    }
+}

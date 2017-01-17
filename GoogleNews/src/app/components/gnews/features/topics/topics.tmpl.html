@@ -1,0 +1,24 @@
+﻿<div class="news-section">
+    <div class="container div-news">
+        <header>
+            <span class="h-news">The News</span>
+        </header>
+        <div class="row">
+            <div class="col-sm-4">
+                <h2 class="span-news">topics</h2>
+                <div class="div-topics">
+                    <div ng-repeat="topic in vm.topics">
+                        <a ui-sref="news.article({ id: topic.Id })">{{::topic.Title}}</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-sm-8">
+                <h2 class="span-news">post</h2>
+                <ui-view></ui-view>
+            </div>
+        </div>
+    </div>
+</div>
+

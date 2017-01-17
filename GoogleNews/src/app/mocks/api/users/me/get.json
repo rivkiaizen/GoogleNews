@@ -1,0 +1,17 @@
+{
+	"success": true,
+	"messages":[],
+	"data": {
+		"activities":[
+			{
+				"activityCode":"OM001"
+			}
+		],
+		"fields":[
+			{
+				"fieldCode":"waiveIt",
+				"fieldAttribute":"R"
+			}
+		]
+	}
+}

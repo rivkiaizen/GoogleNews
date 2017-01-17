@@ -1,0 +1,10 @@
+﻿<div class="article-section">
+    <div>
+        <br />
+        <h1 ng-bind="vm.article.Title"></h1>
+        <div class="article-body" ng-bind-html="vm.article.Body"></div>
+        <div class="pull-right read-more">
+            <a ng-href="{{vm.article.Link}}" ng-attr-target="_blank" ng-if="vm.article.Link">read more..</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+﻿
+.news-section {
+    .h-news {
+        color: $color-yellow-base;
+        font-family: $font-family-base;
+        font-size: 58px;
+    }
+
+    .div-news {
+        margin-top: 50px !important;
+        text-align: center;
+    }
+
+    .div-topics {
+        margin-top: 50px !important;
+
+        div {
+            text-align: left !important;
+            padding-bottom: 12px;
+        }
+    }
+
+    .span-news {
+        color: $color-base;
+        font-family: $font-family-base;
+        font-size: 40px;
+    }
+
+    .span-message {
+        color: $color-base;
+        font-family: $font-family-base;
+    }
+}

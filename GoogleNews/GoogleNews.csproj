@@ -44,6 +44,34 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
@@ -123,6 +151,9 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="NewFolder1\" />
+    <Folder Include="src\app\components\gnews\common\directives\" />
+    <Folder Include="src\app\components\gnews\common\filters\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -165,10 +196,23 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="src\.gitignore" />
+    <Content Include="src\app\app.js" />
+    <Content Include="src\app\components\gnews\common\constants\HTTP_ERRORS.js" />
+    <Content Include="src\app\components\gnews\common\services\gnews.articles.srv.js" />
+    <Content Include="src\app\components\gnews\config\errorInterceptor.js" />
+    <Content Include="src\app\components\gnews\config\spinnerInterceptor.js" />
+    <Content Include="src\app\components\gnews\features\article\article.ctrl.js" />
+    <Content Include="src\app\components\gnews\features\article\article.tmpl.html" />
+    <Content Include="src\app\components\gnews\features\topics\topics.ctrl.js" />
+    <Content Include="src\app\components\gnews\features\topics\topics.tmpl.html" />
+    <Content Include="src\app\components\gnews\gnews.js" />
+    <Content Include="src\app\favicon.png" />
+    <Content Include="src\app\fonts\fontawesome-webfont.svg" />
+    <Content Include="src\app\index.html" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap.js" />
@@ -192,12 +236,22 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="src\app\components\gnews\package.json" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="src\browserify.config.js" />
+    <Content Include="src\Gruntfile.js" />
+    <Content Include="src\app\mocks\mocks.js" />
+    <Content Include="src\app\mocks\mocks.public.js" />
+    <Content Include="src\webpack.config.js" />
+    <Content Include="src\webpack.public.config.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -213,6 +267,55 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="src\.bowerrc" />
+    <Content Include="src\.jscsrc" />
+    <Content Include="src\.jshintrc" />
+    <Content Include="src\bower.json" />
+    <Content Include="src\build.cmd" />
+    <Content Include="src\build.log" />
+    <Content Include="src\build.sh" />
+    <Content Include="src\install-requirements.sh" />
+    <Content Include="src\package.json" />
+    <Content Include="src\README.md" />
+    <Content Include="src\startNodeJS.cmd" />
+    <Content Include="src\app\mocks\api\CVS\Entries" />
+    <Content Include="src\app\mocks\api\CVS\Repository" />
+    <Content Include="src\app\mocks\api\CVS\Root" />
+    <Content Include="src\app\mocks\api\data.json" />
+    <Content Include="src\app\mocks\api\get.json" />
+    <Content Include="src\app\mocks\api\lastChange.json" />
+    <Content Include="src\app\mocks\api\level.json" />
+    <Content Include="src\app\mocks\api\O2AC_REF_MNPHED.json" />
+    <Content Include="src\app\mocks\api\users\CVS\Entries" />
+    <Content Include="src\app\mocks\api\users\CVS\Repository" />
+    <Content Include="src\app\mocks\api\users\CVS\Root" />
+    <Content Include="src\app\mocks\api\users\login\CVS\Entries" />
+    <Content Include="src\app\mocks\api\users\login\CVS\Entries.Extra" />
+    <Content Include="src\app\mocks\api\users\login\CVS\Entries.Old" />
+    <Content Include="src\app\mocks\api\users\login\CVS\Repository" />
+    <Content Include="src\app\mocks\api\users\login\CVS\Root" />
+    <Content Include="src\app\mocks\api\users\login\post.json" />
+    <Content Include="src\app\mocks\api\users\me\CVS\Entries" />
+    <Content Include="src\app\mocks\api\users\me\CVS\Entries.Extra" />
+    <Content Include="src\app\mocks\api\users\me\CVS\Entries.Old" />
+    <Content Include="src\app\mocks\api\users\me\CVS\Repository" />
+    <Content Include="src\app\mocks\api\users\me\CVS\Root" />
+    <Content Include="src\app\mocks\api\users\me\get.json" />
+    <Content Include="src\app\mocks\api\users\token\CVS\Entries" />
+    <Content Include="src\app\mocks\api\users\token\CVS\Entries.Extra" />
+    <Content Include="src\app\mocks\api\users\token\CVS\Entries.Old" />
+    <Content Include="src\app\mocks\api\users\token\CVS\Repository" />
+    <Content Include="src\app\mocks\api\users\token\CVS\Root" />
+    <Content Include="src\app\mocks\api\users\token\get.json" />
+    <Content Include="src\app\assets\styles\style.scss" />
+    <Content Include="src\app\assets\styles\vars.scss" />
+    <Content Include="src\app\components\gnews\features\article\article.style.scss" />
+    <Content Include="src\app\components\gnews\features\topics\topics.style.scss" />
+    <Content Include="src\app\fonts\fontawesome-webfont.eot" />
+    <Content Include="src\app\fonts\fontawesome-webfont.ttf" />
+    <Content Include="src\app\fonts\fontawesome-webfont.woff" />
+    <Content Include="src\app\fonts\fontawesome-webfont.woff2" />
+    <Content Include="src\app\fonts\FontAwesome.otf" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
