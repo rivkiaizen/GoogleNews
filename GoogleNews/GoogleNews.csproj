@@ -80,6 +80,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -150,10 +152,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
-    <Folder Include="NewFolder1\" />
     <Folder Include="src\app\components\gnews\common\directives\" />
     <Folder Include="src\app\components\gnews\common\filters\" />
+    <Folder Include="src\app\mocks\api\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -188,11 +189,14 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Controllers\GoogleNewsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ItemViewModel.cs" />
+    <Compile Include="Models\TitleViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -278,35 +282,6 @@
     <Content Include="src\package.json" />
     <Content Include="src\README.md" />
     <Content Include="src\startNodeJS.cmd" />
-    <Content Include="src\app\mocks\api\CVS\Entries" />
-    <Content Include="src\app\mocks\api\CVS\Repository" />
-    <Content Include="src\app\mocks\api\CVS\Root" />
-    <Content Include="src\app\mocks\api\data.json" />
-    <Content Include="src\app\mocks\api\get.json" />
-    <Content Include="src\app\mocks\api\lastChange.json" />
-    <Content Include="src\app\mocks\api\level.json" />
-    <Content Include="src\app\mocks\api\O2AC_REF_MNPHED.json" />
-    <Content Include="src\app\mocks\api\users\CVS\Entries" />
-    <Content Include="src\app\mocks\api\users\CVS\Repository" />
-    <Content Include="src\app\mocks\api\users\CVS\Root" />
-    <Content Include="src\app\mocks\api\users\login\CVS\Entries" />
-    <Content Include="src\app\mocks\api\users\login\CVS\Entries.Extra" />
-    <Content Include="src\app\mocks\api\users\login\CVS\Entries.Old" />
-    <Content Include="src\app\mocks\api\users\login\CVS\Repository" />
-    <Content Include="src\app\mocks\api\users\login\CVS\Root" />
-    <Content Include="src\app\mocks\api\users\login\post.json" />
-    <Content Include="src\app\mocks\api\users\me\CVS\Entries" />
-    <Content Include="src\app\mocks\api\users\me\CVS\Entries.Extra" />
-    <Content Include="src\app\mocks\api\users\me\CVS\Entries.Old" />
-    <Content Include="src\app\mocks\api\users\me\CVS\Repository" />
-    <Content Include="src\app\mocks\api\users\me\CVS\Root" />
-    <Content Include="src\app\mocks\api\users\me\get.json" />
-    <Content Include="src\app\mocks\api\users\token\CVS\Entries" />
-    <Content Include="src\app\mocks\api\users\token\CVS\Entries.Extra" />
-    <Content Include="src\app\mocks\api\users\token\CVS\Entries.Old" />
-    <Content Include="src\app\mocks\api\users\token\CVS\Repository" />
-    <Content Include="src\app\mocks\api\users\token\CVS\Root" />
-    <Content Include="src\app\mocks\api\users\token\get.json" />
     <Content Include="src\app\assets\styles\style.scss" />
     <Content Include="src\app\assets\styles\vars.scss" />
     <Content Include="src\app\components\gnews\features\article\article.style.scss" />

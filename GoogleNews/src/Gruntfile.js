@@ -30,7 +30,7 @@ module.exports = function (grunt) {
 				{
 				    context: '/api',
 				    host: 'localhost', // Domain or ip
-				    port: 62877,
+				    port: 62229,
 					changeOrigin: true,
 					https: false,
 					xforward: false
