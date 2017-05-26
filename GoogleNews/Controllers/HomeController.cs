@@ -10,6 +10,7 @@ namespace GoogleNews.Controllers
     {
         public ActionResult Index()
         {
+            //is it needed?
             ViewBag.Title = "Home Page";
 
             return View();

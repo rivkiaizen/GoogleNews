@@ -49,6 +49,8 @@ namespace GoogleNews.Controllers
         // GET api/values/5
         public ItemViewModel Get(string id)
         {
+
+            //example
             ItemViewModel item = new ItemViewModel();
             SyndicationFeed feed = getGoogleNews();
             var find = feed.Items.FirstOrDefault(x => x.Id == id);
