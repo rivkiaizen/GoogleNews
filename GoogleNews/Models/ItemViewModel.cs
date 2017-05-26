@@ -7,7 +7,7 @@ namespace GoogleNews.Models
 {
     public class ItemViewModel
     {
-        public string Id;
+        public string Id; //remark
         public string Title;
         public string Link;
         public string Body;
