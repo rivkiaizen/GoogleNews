@@ -1,7 +1,7 @@
 'use strict';
 var spinnerInterceptor = function($q, $rootScope) {
 	'ngInject';
-
+    //add spinner
 	var numLoadings = 0;
 	var EXCLUSIONS = [
 	];
